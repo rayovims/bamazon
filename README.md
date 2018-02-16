@@ -1,3 +1,3 @@
 # bamazon
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/rayovims/bamazon/blob/master/images/1.png)
