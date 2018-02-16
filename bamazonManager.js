@@ -4,9 +4,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-
     user: "Ray",
-
     password: "password",
     database: "bamazonDB"
 });
@@ -74,7 +72,7 @@ function addInven() {
             item_id: result.ID
         }, function (err, res) {
             var NewQuan = res[0].stock_quantity += parseInt(result.amount);
-            var query = connection.query("UPDATE products SET ? WHERE ?", [
+            connection.query("UPDATE products SET ? WHERE ?", [
                 {
                     stock_quantity: NewQuan
                 },
